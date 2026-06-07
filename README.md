@@ -35,16 +35,13 @@ The page reads the latest app release at runtime from:
 https://raw.githubusercontent.com/trycoxyl/warehouse-order-consolidator-releases/main/latest.json
 ```
 
-`src/release.js` maps these fields into the page:
+`src/release.js` maps these fields for the live download controls:
 
 - `version` or `app_version`
-- `release_date` or `published_at`
-- `release_notes`, `whats_new`, or `notes`
 - `download_url` or `app_download_url`
 - `download_size` or `app_download_size`
-- `sha256` or `app_sha256`
 
-The header and hero download buttons use `download_url`. If `latest.json` cannot be loaded, the page shows a fallback warning and points users to the manual GitHub Releases link:
+The header and hero download buttons use `download_url`, and the page shows only a small live version/package label so frequent releases do not require manual page edits. If `latest.json` cannot be loaded, the page shows a fallback warning and points users to the manual GitHub Releases link:
 
 ```text
 https://github.com/trycoxyl/warehouse-order-consolidator-releases/releases/latest
