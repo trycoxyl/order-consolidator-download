@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Download Order Consolidator, a warehouse picking list consolidation tool for marketplace operations."
+    />
+    <title>Order Consolidator | Download</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="Order Consolidator home">
+          <span class="brand-mark" aria-hidden="true">OC</span>
+          <span>
+            <strong>Order Consolidator</strong>
+            <small>Warehouse picking list consolidation tool</small>
+          </span>
+        </a>
+
+        <nav class="nav-links" aria-label="Page links">
+          <a href="#release">Version</a>
+          <a href="#whats-new">What's New</a>
+          <a href="#support">User Guide</a>
+        </nav>
+
+        <a class="button button-small download-link" href="#" data-download-link>Download</a>
+      </header>
+
+      <main class="hero-grid">
+        <section class="hero-copy" aria-labelledby="hero-title">
+          <p class="tagline">Warehouse picking list consolidation tool</p>
+          <h1 id="hero-title">Order Consolidator</h1>
+          <p class="hero-subtitle">
+            Consolidate marketplace picking lists, AWB matching, and packing allocation in one desktop app.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary download-link" href="#" data-download-link>
+              Download Latest Version
+            </a>
+            <a class="button button-secondary" href="#support">User Guide / Support</a>
+          </div>
+
+        </section>
+
+        <aside class="release-panel" id="release" aria-label="Current release">
+          <div class="release-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="release-status-text">Loading latest release</span>
+          </div>
+
+          <dl class="release-facts">
+            <div>
+              <dt>Current version</dt>
+              <dd id="release-version">Loading...</dd>
+            </div>
+            <div>
+              <dt>Release date</dt>
+              <dd id="release-date">Loading...</dd>
+            </div>
+            <div>
+              <dt>Package</dt>
+              <dd id="release-package">ZIP download</dd>
+            </div>
+          </dl>
+
+          <div class="whats-new" id="whats-new">
+            <h2>What's New</h2>
+            <ul id="release-notes">
+              <li>Loading release notes...</li>
+            </ul>
+          </div>
+
+          <p class="fallback-message" id="fallback-message" hidden>
+            Release metadata could not be loaded. Use the manual GitHub Releases link below.
+          </p>
+          <a class="manual-link" id="manual-release-link" href="https://github.com/trycoxyl/warehouse-order-consolidator-releases/releases/latest">
+            Manual GitHub Releases link
+          </a>
+        </aside>
+      </main>
+
+      <section class="feature-row" aria-label="Product capabilities">
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M7 4h10a2 2 0 0 1 2 2v14H5V6a2 2 0 0 1 2-2Z" />
+              <path d="M8 9h8M8 13h8M8 17h5" />
+            </svg>
+          </span>
+          <h2>Picking List Parser</h2>
+          <p>Turn marketplace exports into cleaner order lists.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M4 7h10v10H4z" />
+              <path d="M14 10h3l3 3v4h-6z" />
+              <path d="M7 18a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM17 18a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+            </svg>
+          </span>
+          <h2>AWB Matching</h2>
+          <p>Review courier tracking coverage and exceptions.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+              <path d="M8 5v14M16 5v14" />
+            </svg>
+          </span>
+          <h2>Packing Allocation</h2>
+          <p>Plan line workload with supervisor-ready summaries.</p>
+        </article>
+
+        <article class="feature-card" id="support">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M5 12a7 7 0 0 1 12-5" />
+              <path d="M17 4v4h-4" />
+              <path d="M19 12a7 7 0 0 1-12 5" />
+              <path d="M7 20v-4h4" />
+            </svg>
+          </span>
+          <h2>Manual Update</h2>
+          <p>Download the latest ZIP and update when ready.</p>
+        </article>
+      </section>
+    </div>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>

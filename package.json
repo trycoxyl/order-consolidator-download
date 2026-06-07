@@ -1,0 +1,12 @@
+{
+  "name": "order-consolidator-download",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve@latest .",
+    "test": "node --test",
+    "check": "node --check src/app.js && node --check src/release.js"
+  },
+  "devDependencies": {}
+}
