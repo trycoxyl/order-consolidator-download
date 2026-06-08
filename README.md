@@ -2,6 +2,12 @@
 
 Static one-page download landing page for **Order Consolidator**, designed for Vercel.
 
+The site includes:
+
+- `index.html` for the download landing page
+- `features.html` for honest app capability notes
+- `version.html` for the release history card stack
+
 ## Run Locally
 
 ```powershell
@@ -46,3 +52,13 @@ The header and hero download buttons use `download_url`, and the page shows only
 ```text
 https://github.com/trycoxyl/warehouse-order-consolidator-releases/releases/latest
 ```
+
+## Version History
+
+`version.html` reads the public GitHub Releases API:
+
+```text
+https://api.github.com/repos/trycoxyl/warehouse-order-consolidator-releases/releases?per_page=100
+```
+
+`src/versions.js` converts release notes into concise, impact-oriented cards. If the GitHub API cannot load, the page falls back to a local release history snapshot.

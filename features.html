@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Order Consolidator features for warehouse picking list consolidation, AWB matching, courier review, and packing allocation."
+    />
+    <title>Order Consolidator | Features</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/assets/order-consolidator-logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell page-shell-scroll">
+      <header class="site-header" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="Order Consolidator home">
+          <img
+            class="brand-logo"
+            src="/assets/order-consolidator-logo.svg"
+            width="28"
+            height="28"
+            alt=""
+            aria-hidden="true"
+          />
+          <strong>Order Consolidator</strong>
+        </a>
+
+        <nav class="nav-links" aria-label="Page links">
+          <a href="/">Products</a>
+          <a href="/features.html" aria-current="page">Features</a>
+          <a href="/version.html" id="nav-version">Version</a>
+          <a href="#support">User Guide</a>
+        </nav>
+
+        <a class="button button-small download-link" href="#" data-download-link>Download</a>
+      </header>
+
+      <main class="subpage">
+        <section class="subpage-hero feature-hero" aria-labelledby="features-title">
+          <p class="subpage-kicker">Features</p>
+          <h1 id="features-title">We understand warehouse teams need clear daily tools, not extra admin work.</h1>
+          <p>
+            Order Consolidator is built around practical warehouse workflows: importing marketplace picking lists,
+            checking AWB coverage, reviewing courier patterns, and preparing packing allocation summaries.
+          </p>
+        </section>
+
+        <section class="feature-detail-grid" aria-label="Order Consolidator feature list">
+          <article class="feature-detail-card">
+            <div class="feature-detail-visual parser-visual" aria-hidden="true">
+              <span></span><span></span><span></span><strong>SKU</strong>
+            </div>
+            <div>
+              <h2>Picking list parser</h2>
+              <p>
+                Imports supported marketplace picking list files and turns them into structured order rows for review.
+                The goal is to reduce manual copying before warehouse work starts.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-detail-card">
+            <div class="feature-detail-visual awb-visual" aria-hidden="true">
+              <span></span><span></span><i></i>
+            </div>
+            <div>
+              <h2>AWB matching and exception review</h2>
+              <p>
+                Helps compare orders against tracking information, then separates matched, unmatched, and missing
+                records so the team can review exceptions before packing.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-detail-card">
+            <div class="feature-detail-visual courier-visual" aria-hidden="true">
+              <span>15</span><span>Prefix</span><span>Suffix</span>
+            </div>
+            <div>
+              <h2>Courier pattern review</h2>
+              <p>
+                Shows courier recognition patterns and supports sample-based suggestions for recurring tracking
+                number shapes. This is useful when one-off manual fixes are not enough.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-detail-card">
+            <div class="feature-detail-visual allocation-visual" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div>
+              <h2>Packing allocation summaries</h2>
+              <p>
+                Produces allocation views that help supervisors compare packing workload. It is a planning aid for
+                repeated warehouse batches, not a replacement for supervisor judgement.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-detail-card">
+            <div class="feature-detail-visual audit-visual" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div>
+              <h2>Export and audit-friendly outputs</h2>
+              <p>
+                Keeps useful batch context such as platform, tracking-only rows, pick points, complexity, and
+                allocation fields available for review or exported records.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-detail-card">
+            <div class="feature-detail-visual access-visual" aria-hidden="true">
+              <span>Admin</span><span>Warehouse</span>
+            </div>
+            <div>
+              <h2>Local access controls</h2>
+              <p>
+                Supports local login, role separation, and company-scoped visibility for teams that need basic access
+                control without depending on an online login service.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-detail-card">
+            <div class="feature-detail-visual sync-visual" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div>
+              <h2>Shared config sync</h2>
+              <p>
+                Provides shared-folder configuration workflows for access data, with manual sync and publish actions
+                for teams using shared folders such as Google Drive Desktop, OneDrive, NAS, or LAN locations.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-detail-card">
+            <div class="feature-detail-visual update-visual" aria-hidden="true">
+              <strong id="card-version">ZIP</strong>
+              <span></span>
+            </div>
+            <div>
+              <h2>Manual update flow</h2>
+              <p>
+                Releases are distributed as a Windows ZIP. The download page reads the latest release link
+                automatically, while operators can still use the manual GitHub Releases page when needed.
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <section class="support-panel" id="support" aria-labelledby="support-title">
+          <div>
+            <p class="subpage-kicker">User Guide / Support</p>
+            <h2 id="support-title">Placeholder for operating notes</h2>
+            <p>
+              Add the production user guide or support contact here when it is ready. For now, the download and
+              version pages stay focused on the app capabilities and release files.
+            </p>
+          </div>
+          <a class="button button-primary download-link" href="#" data-download-link>Download Latest</a>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>

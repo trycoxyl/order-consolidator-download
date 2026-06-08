@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx --yes serve@latest .",
     "test": "node --test",
-    "check": "node --check src/app.js && node --check src/release.js"
+    "check": "node --check src/app.js && node --check src/release.js && node --check src/versions.js"
   },
   "devDependencies": {}
 }
