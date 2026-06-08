@@ -82,22 +82,13 @@ a {
   white-space: nowrap;
 }
 
-.brand-mark {
-  position: relative;
-  display: inline-block;
-  width: 24px;
-  height: 24px;
+.brand-logo {
+  display: block;
+  width: 28px;
+  height: 28px;
   flex: 0 0 auto;
-  border-radius: 50%;
-  background: repeating-conic-gradient(from 0deg, #fff 0 10deg, transparent 10deg 24deg);
-}
-
-.brand-mark::after {
-  position: absolute;
-  inset: 7px;
-  content: "";
-  background: rgba(137, 69, 232, 0.68);
-  border-radius: 50%;
+  border-radius: 7px;
+  box-shadow: 0 8px 18px rgba(73, 38, 158, 0.2);
 }
 
 .nav-links {
@@ -493,9 +484,9 @@ h1 span {
     font-size: 0.92rem;
   }
 
-  .brand-mark {
-    width: 24px;
-    height: 24px;
+  .brand-logo {
+    width: 28px;
+    height: 28px;
   }
 
   .button-small {
