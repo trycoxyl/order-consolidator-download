@@ -10,7 +10,7 @@ export const FALLBACK_HISTORY = [
     date: "Jun 7, 2026",
     impact: "New staff data folders can open at Login with the prepared seed database, while existing data folders are left untouched.",
     notes: [
-      "Release ZIP includes the prepared seed SQLite database.",
+      "Prepared seed SQLite database included with the release.",
       "Fresh staff Data Folders show Login instead of First Admin Setup.",
       "Existing Data Folder databases are never overwritten.",
     ],
@@ -157,13 +157,20 @@ function parseReleaseBody(body = "") {
   const heading = lines[0]?.replace(/[.]+$/, "") || "Order Consolidator update";
   const notes = lines
     .slice(1)
-    .map((line) => line.replace(/^[-*]\s*/, ""))
+    .map((line) => cleanClientReleaseNote(line.replace(/^[-*]\s*/, "")))
     .filter(Boolean);
 
   return {
     heading,
     notes: notes.length ? notes : [heading],
   };
+}
+
+function cleanClientReleaseNote(note = "") {
+  return String(note)
+    .replace(/^Release ZIP includes\s+/i, "Includes ")
+    .replace(/\bZIP\b/g, "release package")
+    .trim();
 }
 
 export function normalizeGithubRelease(release = {}) {

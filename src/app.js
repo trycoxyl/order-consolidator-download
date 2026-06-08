@@ -3,7 +3,7 @@ import { FALLBACK_RELEASE, getDownloadUrl, loadLatestRelease } from "./release.j
 const els = {
   navVersion: document.querySelector("#nav-version"),
   downloadMeta: document.querySelector("#download-meta"),
-  cardVersion: document.querySelector("#card-version"),
+  cardVersions: document.querySelectorAll("[data-version-label], #card-version"),
   fallbackMessage: document.querySelector("#fallback-message"),
   manualReleaseLink: document.querySelector("#manual-release-link"),
   downloadLinks: document.querySelectorAll("[data-download-link]"),
@@ -11,6 +11,12 @@ const els = {
 
 function setText(element, value) {
   if (element) element.textContent = value;
+}
+
+function setTextAll(elements, value) {
+  elements.forEach((element) => {
+    element.textContent = value;
+  });
 }
 
 function renderDownloadLinks(release) {
@@ -42,7 +48,7 @@ function renderRelease(release) {
 
   setText(els.navVersion, versionLabel);
   setText(els.downloadMeta, metaParts);
-  setText(els.cardVersion, release.isFallback ? "ZIP" : `v${release.version}`);
+  setTextAll(els.cardVersions, release.isFallback ? "ZIP" : `v${release.version}`);
 
   if (els.fallbackMessage) {
     els.fallbackMessage.hidden = !release.isFallback;

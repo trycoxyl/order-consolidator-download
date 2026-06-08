@@ -52,6 +52,40 @@
           </p>
         </section>
 
+        <section class="app-snapshot" aria-label="Order Consolidator workflow snapshot">
+          <div class="snapshot-toolbar">
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <strong>Order Consolidator</strong>
+          </div>
+          <div class="snapshot-content">
+            <aside class="snapshot-sidebar" aria-label="Workflow steps">
+              <span class="is-active">Import</span>
+              <span>AWB Review</span>
+              <span>Courier Pattern</span>
+              <span>Allocation</span>
+            </aside>
+            <div class="snapshot-panel">
+              <div class="snapshot-panel-head">
+                <div>
+                  <h2>Batch review</h2>
+                  <p>Marketplace rows, tracking checks, and packing fields in one working view.</p>
+                </div>
+                <span data-version-label>v...</span>
+              </div>
+              <div class="snapshot-table" aria-hidden="true">
+                <div><strong>Platform</strong><strong>AWB</strong><strong>Status</strong><strong>Pack</strong></div>
+                <div><span>Shopee</span><span>SPX...</span><span>Matched</span><span>Line 1</span></div>
+                <div><span>TikTok</span><span>JNT...</span><span>Review</span><span>Line 2</span></div>
+                <div><span>Lazada</span><span>NJV...</span><span>Matched</span><span>Line 1</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="feature-detail-grid" aria-label="Order Consolidator feature list">
           <article class="feature-detail-card">
             <div class="feature-detail-visual parser-visual" aria-hidden="true">
@@ -146,7 +180,7 @@
 
           <article class="feature-detail-card">
             <div class="feature-detail-visual update-visual" aria-hidden="true">
-              <strong id="card-version">ZIP</strong>
+              <strong data-version-label>ZIP</strong>
               <span></span>
             </div>
             <div>
@@ -159,13 +193,11 @@
           </article>
         </section>
 
-        <section class="support-panel" id="support" aria-labelledby="support-title">
+        <section class="feature-download-strip" id="support" aria-labelledby="support-title">
           <div>
-            <p class="subpage-kicker">User Guide / Support</p>
-            <h2 id="support-title">Placeholder for operating notes</h2>
+            <h2 id="support-title">Review the current Windows release.</h2>
             <p>
-              Add the production user guide or support contact here when it is ready. For now, the download and
-              version pages stay focused on the app capabilities and release files.
+              Download the latest ZIP when you are ready to check the current build with your warehouse workflow.
             </p>
           </div>
           <a class="button button-primary download-link" href="#" data-download-link>Download Latest</a>

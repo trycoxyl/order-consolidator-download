@@ -18,7 +18,7 @@ function createList(notes) {
 function createReleaseCard(release, index) {
   const card = document.createElement("article");
   card.className = "version-card";
-  card.style.setProperty("--stack-index", index);
+  card.style.setProperty("--release-index", index + 1);
 
   const head = document.createElement("div");
   head.className = "version-card-head";
@@ -36,19 +36,7 @@ function createReleaseCard(release, index) {
   impact.className = "version-impact";
   impact.textContent = release.impact;
 
-  const footer = document.createElement("div");
-  footer.className = "version-card-footer";
-
-  const size = document.createElement("span");
-  size.textContent = release.sizeLabel ? `ZIP ${release.sizeLabel}` : "Release ZIP";
-
-  const link = document.createElement("a");
-  link.href = release.downloadUrl;
-  link.rel = "noopener";
-  link.textContent = release.isFallback ? "Open release" : "Download ZIP";
-
-  footer.append(size, link);
-  card.append(head, title, impact, createList(release.notes), footer);
+  card.append(head, title, impact, createList(release.notes));
 
   return card;
 }
