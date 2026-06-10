@@ -5,6 +5,34 @@ export const GITHUB_RELEASES_URL =
 
 export const FALLBACK_HISTORY = [
   {
+    version: "v0.6.10",
+    title: "Guided reconciliation and batch reporting",
+    date: "Jun 10, 2026",
+    impact: "Guided reconciliation, persistent review state, and lighter batch reporting help operators see what is ready, what needs attention, and what to do next without hunting across screens.",
+    notes: [
+      "Adds a Reconciliation Control Room with a decision banner, KPI cards, and a focused Action Queue.",
+      "Keeps tracking-only, parser warning, and courier review decisions persistent while refreshing only affected surfaces.",
+      "Adds Line-Based AWB Pack plus a collapsed Report / Batch History panel with clearer operation narrative sections.",
+    ],
+    downloadUrl: "https://github.com/trycoxyl/warehouse-order-consolidator-releases/releases/tag/v0.6.10",
+    sizeLabel: "",
+    isFallback: true,
+  },
+  {
+    version: "v0.6.9",
+    title: "AWB preview and app branding",
+    date: "Jun 9, 2026",
+    impact: "Compact AWB preview, Product Master usability refinements, and packaged logo assets improve print checks and polish the shipped desktop app experience.",
+    notes: [
+      "Adds a compact AWB PDF preview for faster shipment review.",
+      "Improves Product Master usability for day-to-day maintenance work.",
+      "Packages updated logo and icon assets into the desktop build.",
+    ],
+    downloadUrl: "https://github.com/trycoxyl/warehouse-order-consolidator-releases/releases/tag/v0.6.9",
+    sizeLabel: "",
+    isFallback: true,
+  },
+  {
     version: "v0.6.8",
     title: "Seeded staff login release",
     date: "Jun 7, 2026",
@@ -118,6 +146,14 @@ export function formatReleaseDate(value) {
 export function getImpactSummary(version, text = "") {
   const haystack = `${version} ${text}`.toLowerCase();
 
+  if (haystack.includes("guided reconciliation") || haystack.includes("batch reporting")) {
+    return "Guided reconciliation, persistent review state, and lighter batch reporting help operators see what is ready, what needs attention, and what to do next without hunting across screens.";
+  }
+
+  if (haystack.includes("awb preview") || haystack.includes("app branding")) {
+    return "Compact AWB preview, Product Master usability refinements, and packaged logo assets improve print checks and polish the shipped desktop app experience.";
+  }
+
   if (haystack.includes("seeded staff") || haystack.includes("first admin setup")) {
     return "New staff data folders can open at Login with the prepared seed database, while existing data folders are left untouched.";
   }
@@ -154,9 +190,23 @@ function parseReleaseBody(body = "") {
     .split(/\r?\n/)
     .map((line) => line.trim())
     .filter(Boolean);
-  const heading = lines[0]?.replace(/[.]+$/, "") || "Order Consolidator update";
+  const rawHeading = lines[0] || "Order Consolidator update";
+  const inlineNotes = [];
+  const inlineIncludes = rawHeading.match(/^(.*?)(?:\.\s+)?(Includes\s+.+)$/i);
+  const headingSource = inlineIncludes ? inlineIncludes[1] : rawHeading;
+
+  if (inlineIncludes?.[2]) {
+    inlineNotes.push(inlineIncludes[2]);
+  }
+
+  const heading =
+    headingSource
+      .replace(/\s+release built from source tag\s+v[\d.]+\s+at commit\s+[0-9a-f]+\.?$/i, "")
+      .replace(/[.]+$/, "")
+      .trim() || "Order Consolidator update";
   const notes = lines
     .slice(1)
+    .concat(inlineNotes)
     .map((line) => cleanClientReleaseNote(line.replace(/^[-*]\s*/, "")))
     .filter(Boolean);
 
